@@ -1,0 +1,52 @@
+CREATE TABLE
+    employee (
+        employee_id INT AUTO_INCREMENT,
+        first_name VARCHAR(20),
+        last_name VARCHAR(20),
+        email VARCHAR(32),
+        phone_number INT,
+        job_id INT,
+        salary INT DEFAULT 0,
+        PRIMARY KEY(employee_id)
+    );
+
+ALTER TABLE  //за импортиране на база данни се използват тези две функции
+    employee DISCARD TABLESPACE;
+
+ALTER TABLE
+    employee IMPORT TABLESPACE;
+
+
+
+DROP TABLE
+    employee;
+
+CREATE TABLE
+    jobs (
+        job_id INT,
+        job_title VARCHAR(20),
+        min_salary INT,
+        max_salary INT
+    );
+
+INSERT INTO
+    jobs
+VALUES
+    (1, 'Human Resources', 1300, 1900);
+
+INSERT INTO
+    jobs
+VALUES
+    (2, 'Junior C++ Developer', 1900, 2300);
+
+INSERT INTO
+    jobs
+VALUES
+    (3, 'Senior C++ Developer', 2800, 4000);
+
+UPDATE
+    employee
+SET
+    salary = 150
+WHERE
+    employee_id = 1
