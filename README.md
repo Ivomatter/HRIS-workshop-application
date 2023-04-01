@@ -1,2 +1,2 @@
-# Miscellaneous
- For random or unfinished programs and projects
+# Human Resources Managment System
+A small Human Resources Management System prototype that I developed in order to apply for a workshop at Nemecheck Bulgaria
